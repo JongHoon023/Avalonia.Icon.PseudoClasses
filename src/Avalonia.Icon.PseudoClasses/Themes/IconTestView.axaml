@@ -15,14 +15,14 @@
 					<i:Icon
 						x:Name="PART_Icon"
 						Grid.Column="0"
-						FontSize="12"
+						FontSize="24"
 						RenderOptions.BitmapInterpolationMode="HighQuality" />
 
 					<TextBlock
 						x:Name="PART_StatusText"
 						Grid.Column="1"
 						Margin="4, 0, 8, 0"
-						FontSize="14"
+						FontSize="30"
 						Foreground="Violet" />
 				</Grid>
 			</ControlTemplate>

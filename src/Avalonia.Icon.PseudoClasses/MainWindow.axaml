@@ -17,6 +17,7 @@
 	<StackPanel
 		Orientation="Vertical">
 		<TextBlock
+			FontSize="30"
 			Text="Welcome to Avalonia!" />
 
 		<components:IconTestView
