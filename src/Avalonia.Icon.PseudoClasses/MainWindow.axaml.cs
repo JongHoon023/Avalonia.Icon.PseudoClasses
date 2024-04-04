@@ -17,7 +17,7 @@ public partial class MainWindow : Window
         {
             while (true)
             {
-                await Task.Delay(1000).ConfigureAwait(false);
+                await Task.Delay(3000).ConfigureAwait(false);
                 viewModel.IsTrue = !viewModel.IsTrue;
             }
         }
