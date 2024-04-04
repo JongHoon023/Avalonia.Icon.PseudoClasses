@@ -1,0 +1,67 @@
+<ResourceDictionary
+	xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:i="clr-namespace:Projektanker.Icons.Avalonia;assembly=Projektanker.Icons.Avalonia"
+	xmlns:components="clr-namespace:Avalonia.Icon.PseudoClasses.Components;assembly=Avalonia.Icon.PseudoClasses">
+	<ControlTheme
+		x:Key="{x:Type components:IconTestView}"
+		TargetType="components:IconTestView">
+		<Setter
+			Property="Template">
+			<ControlTemplate>
+				<Grid
+					ColumnDefinitions="14, *"
+					HorizontalAlignment="{TemplateBinding HorizontalAlignment}">
+					<i:Icon
+						x:Name="PART_Icon"
+						Grid.Column="0"
+						FontSize="12"
+						RenderOptions.BitmapInterpolationMode="HighQuality" />
+
+					<TextBlock
+						x:Name="PART_StatusText"
+						Grid.Column="1"
+						Margin="4, 0, 8, 0"
+						FontSize="14"
+						Foreground="Violet" />
+				</Grid>
+			</ControlTemplate>
+		</Setter>
+
+		<!-- Icon -->
+		<Style
+			Selector="^:true /template/ i|Icon#PART_Icon">
+			<Setter
+				Property="Foreground"
+				Value="#008926" />
+			<Setter
+				Property="Value"
+				Value="fa-solid fa-circle-check" />
+		</Style>
+
+		<Style
+			Selector="^:false /template/ i|Icon#PART_Icon">
+			<Setter
+				Property="Foreground"
+				Value="#DD2929" />
+			<Setter
+				Property="Value"
+				Value="fa-solid fa-circle-xmark" />
+		</Style>
+
+		<!-- TextBlock -->
+		<Style
+			Selector="^:true /template/ TextBlock#PART_StatusText">
+			<Setter
+				Property="Text"
+				Value="IsTrue is true." />
+		</Style>
+
+		<Style
+			Selector="^:false /template/ TextBlock#PART_StatusText">
+			<Setter
+				Property="Text"
+				Value="IsTrue is false." />
+		</Style>
+	</ControlTheme>
+</ResourceDictionary>
